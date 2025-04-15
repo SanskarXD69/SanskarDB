@@ -1,0 +1,25 @@
+# SanskarDB Nimble Config
+
+version       = "0.1.0"
+author        = "Sanskar Balpande" # Change this!
+description   = "Experimental 1-bit multimodal database"
+license       = "MIT"
+srcDir        = "src"
+bin           = @["bitstreamdb"] # If you plan a binary executable later
+
+# Dependencies
+requires "nim >= 1.6.0"
+# Add potential future dependencies here, e.g.:
+# requires "nimcrypto >= 0.2" # For cryptographic hashing if needed
+# requires "arraymancer >= 0.7" # If heavy numerical operations are needed
+
+# Tasks
+task test, "Run unit tests":
+  exec "nim compile --verbosity:0 --run tests/testall.nim"
+
+task docs, "Build documentation":
+  exec "nim doc --project --outdir:htmldocs src/bitstreamdb.nim"
+
+# Ensure the main source file is compiled for 'nimble build' if no bin specified
+# Or handle library compilation appropriately if it's purely a library.
+# For now, assuming a library structure primarily.
