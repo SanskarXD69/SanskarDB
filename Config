@@ -1,7 +1,7 @@
-# SanskarDB Nimble Config
+# AceDB Nimble Config
 
 version       = "0.1.0"
-author        = "Sanskar Balpande" # Change this!
+author        = "Sanskar Balpande" 
 description   = "Experimental 1-bit multimodal database"
 license       = "MIT"
 srcDir        = "src"
